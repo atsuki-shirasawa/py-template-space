@@ -1,0 +1,39 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "python.linting.lintOnSave": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": [
+    "--show-column-numbers",
+    "--show-column-numbers",
+    "--ignore-missing-imports",
+    "--disallow-untyped-defs",
+    "--no-implicit-optional",
+    "--warn-return-any",
+    "--warn-unused-ignores",
+    "--warn-redundant-casts"
+  ],
+  "python.formatting.provider": "none",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "black-formatter.args": [
+    "--line-length=79"
+  ],
+  "autoDocstring.docstringFormat": "google",
+  "editor.rulers": [
+    79
+  ],
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.fontFamily": "MesloLGS NF"
+}

@@ -9,12 +9,18 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+click = "^8.1.3"
 
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
 mypy = "^1.2.0"
 ruff = "^0.0.263"
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.10.0"
+pytest-datadir = "^1.4.1"
+tox = "^4.5.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -45,10 +51,15 @@ select = [
     "B",    # flake8-bugbear
     "COM",  # flake8-commas
     "S",    # flake8-bandit 
+    "PTH",  # flake8-use-pathlib 
 ]
 ignore = [
     "D415", # pydocstyle about First line should end with a '.' , '?' or '!'
     "E501", # line too long, handled by black
+]
+unfixable = [
+    "F401", # disable auto-fix for unused-imports
+    "F841", # disable auto-fix for unused-variable
 ]
 target-version = "py39"
 
