@@ -22,7 +22,7 @@
 {
   /*
     auto-seve & format on save for all files
-*/
+  */
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "editor.formatOnSave": true,
@@ -32,14 +32,14 @@
   },
   /*
     enable Black formatter
-*/
+  */
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "black-formatter.args": ["--line-length=79"],
   /*
     mypy settings
-*/
+  */
   "mypy-type-checker.args": [
     "--show-column-numbers",
     "--ignore-missing-imports",
@@ -51,11 +51,11 @@
   ],
   /*
     docstring style : Google Style
-*/
+  */
   "autoDocstring.docstringFormat": "google",
   /*
     vertical rulers
-*/
+  */
   "editor.rulers": [79]
 }
 ```
