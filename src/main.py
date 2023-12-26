@@ -19,13 +19,7 @@ def calc_sale_amount(price: int, qty: int, tax: float = 0.1) -> int:
 @click.command()
 @click.option("--price", type=int, required=True, help="price of item")
 @click.option("--qty", type=int, required=True, help="quantity of sales item")
-@click.option(
-    "--tax",
-    type=float,
-    required=False,
-    default=0.1,
-    help="tax",
-)
+@click.option("--tax", type=float, required=False, default=0.1, help="tax")
 def main(price: int, qty: int, tax: float = 0.1) -> None:
     """Main function
 

@@ -1,14 +1,27 @@
 {
+  /* 
+    auto-seve & format on save for all files
+  */
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
   },
-  "python.linting.lintOnSave": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.mypyArgs": [
-    "--show-column-numbers",
+  /* 
+    enable Black formatter 
+  */
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  },
+  "black-formatter.args": [
+    "--line-length=79"
+  ],
+  /* 
+    mypy settings
+  */
+  "mypy-type-checker.args": [
     "--show-column-numbers",
     "--ignore-missing-imports",
     "--disallow-untyped-defs",
@@ -17,23 +30,14 @@
     "--warn-unused-ignores",
     "--warn-redundant-casts"
   ],
-  "python.formatting.provider": "none",
-  "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": true
-    },
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "black-formatter.args": [
-    "--line-length=79"
-  ],
+  /* 
+    docstring style : Google Style 
+  */
   "autoDocstring.docstringFormat": "google",
+  /* 
+    vertical rulers 
+  */
   "editor.rulers": [
     79
-  ],
-  "workbench.colorTheme": "GitHub Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.fontFamily": "MesloLGS NF"
+  ]
 }
